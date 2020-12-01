@@ -24,5 +24,7 @@ public class Test01Controller {
     @PostMapping("test01")
     public void test01 (@RequestBody String params) {
         JSONArray parse = (JSONArray) JSONArray.parse(params);
+        JSONArray parse2 = (JSONArray) JSONArray.parse(params);
+
     }
 }
