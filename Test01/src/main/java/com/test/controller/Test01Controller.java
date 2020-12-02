@@ -10,6 +10,7 @@ import org.springframework.util.MultiValueMap;
 import org.springframework.util.SocketUtils;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
@@ -22,9 +23,8 @@ import java.util.SortedMap;
 @ResponseBody
 public class Test01Controller {
     @PostMapping("test01")
-    public void test01 (@RequestBody String params) {
-        JSONArray parse = (JSONArray) JSONArray.parse(params);
-        JSONArray parse2 = (JSONArray) JSONArray.parse(params);
+    public void test01 ( Map map) {
+        System.out.println(map);
 
     }
 }
